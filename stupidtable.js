@@ -63,7 +63,6 @@
             selected_col += parseInt(cols, 10);
         });
 
-        var trs = $(table).find("tbody tr");
         var classes = $($(table).find('th')[index]).attr("class");
         var type = null;
         if (classes) {
@@ -91,6 +90,7 @@
         var sortMethod = $.fn.stupidtable.sortFns[type];
 
         setTimeout(function () {
+            var trs = $(table).find("tbody tr");
             // Gather the elements for this column
             var column = [];
 
